@@ -1,0 +1,103 @@
+// DROP Theme Tokens (Blue/White)
+:root {
+  --rp-bg: #3BAFE1;            /* page backdrop */
+  --rp-surface: #5DADE2;       /* cards */
+  --rp-border: #3498DB;        /* hairline */
+  --rp-text: #FFFFFF;          /* primary text */
+  --rp-text-sub: rgba(255,255,255,.8);
+  --rp-accent: #3B82F6;        /* blue accent */
+  --rp-success: #22C55E;       /* winner ring */
+  --rp-danger: #F43F5E;        /* lose */
+  --arena-fill: #3BAFE1;       /* inside raindrop */
+  --arena-stroke: rgba(255,255,255,.12);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--rp-bg);
+  color: var(--rp-text);
+  width: 100%;
+  overflow-x: hidden;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Krabby Patty', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+.content {
+  margin: 0;
+  padding: 0;
+  background: var(--rp-bg);
+  width: 100vw;
+  
+  > * {
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: 100vw;
+  }
+}
+
+// Global utility classes for rain pool theme
+.rp-text {
+  color: var(--rp-text);
+}
+
+.rp-text-sub {
+  color: var(--rp-text-sub);
+}
+
+.rp-bg {
+  background: var(--rp-bg);
+}
+
+.rp-surface {
+  background: var(--rp-surface);
+}
+
+.rp-border {
+  border-color: var(--rp-border);
+}
+
+.rp-accent {
+  color: var(--rp-accent);
+}
+
+.rp-success {
+  color: var(--rp-success);
+}
+
+.rp-danger {
+  color: var(--rp-danger);
+}
+
+// Ensure all text is white by default in rain pool components
+.rain-pool-view,
+.RaindropRaffle,
+.RecentWinnersPanel,
+.RainPoolRoller {
+  color: var(--rp-text);
+  
+  * {
+    color: inherit;
+  }
+  
+  // Override any existing color styles
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--rp-text);
+  }
+  
+  p, span, div {
+    color: inherit;
+  }
+  
+  button {
+    &:not(.custom-colors) {
+      color: var(--rp-text);
+    }
+  }
+}

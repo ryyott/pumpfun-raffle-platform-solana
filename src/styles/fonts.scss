@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Krabby Patty';
+    src: url('@/assets/fonts/krabby-patty/KrabbyPatty.woff2') format('woff2'),
+        url('@/assets/fonts/krabby-patty/KrabbyPatty.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+// Remove Google Fonts imports that cause corruption
+// @import url('https://fonts.googleapis.com/css2?family=Grandstander&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@500&wght@700&display=swap');

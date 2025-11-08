@@ -1,0 +1,18 @@
+.View {
+  height: calc(100% - $header-height);
+  max-width: 100%;
+  margin: 0 auto;
+  padding-inline: 60px;
+  padding-top: $header-height;
+  padding-bottom: 0;
+  overflow-x: hidden;
+  overflow-y: visible;
+
+  @include sm-down {
+    padding-inline: 20px;
+    min-height: calc(100vh - $header-height);
+    height: auto;
+    padding-bottom: 0;
+    overflow: visible;
+  }
+}

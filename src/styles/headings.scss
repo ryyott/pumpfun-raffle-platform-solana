@@ -1,0 +1,25 @@
+@mixin heading-base {
+  font-family: 'Krabby Patty', sans-serif;
+}
+
+h1 {
+  @include heading-base;
+  font-size: 60px;
+  letter-spacing: 1.5px;
+  margin: 25px 0;
+
+  @include sm-down {
+    font-size: 30px;
+    margin: 15px 0;
+  }
+}
+
+h2 {
+  font-family: 'Grandstander', cursive;
+  font-size: 30px;
+  font-weight: 700;
+
+  @include sm-down {
+    font-size: 20px;
+  }
+}
